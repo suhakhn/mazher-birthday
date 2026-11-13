@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d20">
+  <meta name="description" content="A little birthday universe made with love for Mazher.">
+  <title>For Mazher, My Love ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#page-1" aria-label="Birthday surprise home"><span class="brand-heart">♥</span> a little universe</a>
+    <div class="top-controls">
+      <span class="page-count" id="pageCount">01 <i>/</i> 05</span>
+      <button class="icon-button" id="musicToggle" type="button" aria-label="Turn music on" title="Music is off">♫<span class="music-label">Music off</span></button>
+    </div>
+  </header>
+
+  <div class="progress-track" aria-label="Surprise progress">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <main id="birthdayExperience">
+    <!-- PAGE 1: cinematic entry -->
+    <section class="page page-one active" id="page-1" aria-labelledby="entryTitle">
+      <div class="night-sky" aria-hidden="true">
+        <div class="moon"></div><div class="star-field" id="starField"></div>
+        <span class="shooting-star"></span><span class="shooting-star second"></span>
+      </div>
+      <div class="floating-hearts" aria-hidden="true" id="heartsOne"></div>
+      <div class="entry-content">
+        <p class="eyebrow reveal-up">a little birthday magic, made just for you</p>
+        <h1 id="entryTitle" class="hero-title reveal-up delay-1">Hey Mazher,<br><em>My Love</em> <span class="heart-pink">♥</span></h1>
+        <p class="hero-copy reveal-up delay-2">Today isn't just another day. It's the day someone incredibly special came into this world.</p>
+        <div class="gift-scene reveal-up delay-3">
+          <div class="gift-glow"></div>
+          <div class="gift-box" id="giftBox" aria-label="A wrapped birthday gift">
+            <div class="gift-lid"><span class="bow bow-left"></span><span class="bow bow-right"></span><span class="bow-knot"></span></div>
+            <div class="gift-body"><span class="gift-ribbon"></span></div>
+          </div>
+          <div class="gift-shadow"></div>
+        </div>
+        <button class="primary-button" id="openGift" type="button">Open Your Birthday Surprise <span>🎁</span></button>
+        <p class="micro-note">Psst… this little world is only for you.</p>
+      </div>
+      <div class="gift-reveal" id="giftReveal" aria-live="polite">
+        <div class="burst-heart">♥</div>
+        <p class="script-line">You deserve all the magic in the world.</p>
+        <button class="text-button" data-next="2" type="button">Come a little closer <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: letter -->
+    <section class="page page-two" id="page-2" aria-labelledby="letterTitle">
+      <div class="letter-decor decor-left">✦</div><div class="letter-decor decor-right">♡</div>
+      <div class="section-heading">
+        <p class="eyebrow">chapter two · words from my heart</p>
+        <h2 id="letterTitle">A little letter <em>for you</em></h2>
+        <p class="section-subtitle">Some feelings are too precious to leave unsaid.</p>
+      </div>
+      <div class="letter-stage">
+        <button class="envelope" id="envelope" type="button" aria-label="Open the letter">
+          <span class="envelope-back"></span><span class="letter-paper-peek"></span>
+          <span class="envelope-front"></span><span class="envelope-flap"></span>
+          <span class="wax-seal">M<span>♥</span></span>
+        </button>
+        <p class="tap-hint" id="letterHint">Tap the envelope to open your letter</p>
+        <article class="letter-card" id="letterCard" aria-live="polite">
+          <div class="letter-topline">written with all my love <span>♡</span></div>
+          <div class="letter-copy" id="letterCopy"></div>
+          <div class="letter-signature">Always yours, <span>My Love</span> ♥</div>
+        </article>
+      </div>
+      <button class="primary-button next-letter" id="letterNext" data-next="3" type="button" hidden>There's More Waiting For You... <span>♡</span></button>
+    </section>
+
+    <!-- PAGE 3: cake -->
+    <section class="page page-three" id="page-3" aria-labelledby="cakeTitle">
+      <div class="cake-stars" aria-hidden="true" id="cakeStars"></div>
+      <div class="section-heading cake-heading">
+        <p class="eyebrow">chapter three · make a wish</p>
+        <h2 id="cakeTitle">A cake made <em>just for you</em></h2>
+        <p class="section-subtitle">Close your eyes for a second. This moment is yours.</p>
+      </div>
+      <div class="cake-scene" id="cakeScene" aria-label="An animated three-layer birthday cake">
+        <div class="cake-halo"></div>
+        <div class="cake-stand"><div class="stand-top"></div><div class="stand-stem"></div><div class="stand-foot"></div></div>
+        <div class="cake-build">
+          <div class="cake-layer layer-bottom"><div class="icing-drip"></div></div>
+          <div class="cake-layer layer-middle"><div class="icing-drip"></div></div>
+          <div class="cake-layer layer-top"><div class="icing-drip"></div></div>
+          <div class="cake-topper"><span class="cherry">●</span><span class="cherry">●</span><span class="cherry">●</span></div>
+          <div class="sprinkles" id="sprinkles"></div>
+          <div class="candles" id="candles">
+            <span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span><span class="candle"><i class="flame"></i></span>
+          </div>
+        </div>
+      </div>
+      <p class="cake-status" id="cakeStatus" aria-live="polite">A little sweetness is on its way…</p>
+      <div class="cake-wish" id="cakeWish">
+        <h3>Make a Wish, Mazher! <span>✨</span></h3>
+        <p>Take a breath, make your wish, and let the universe hear it.</p>
+        <button class="primary-button" id="blowCandles" type="button">Blow Out Your Candles <span>🎂</span></button>
+      </div>
+      <div class="cake-message" id="cakeMessage" aria-live="polite">
+        <p class="script-line">May every wish in your heart find its way to reality.</p>
+        <h3>Happy Birthday, My Love! <span>♥</span></h3>
+        <button class="text-button" data-next="4" type="button">On to your beautiful future <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: dreams -->
+    <section class="page page-four" id="page-4" aria-labelledby="dreamTitle">
+      <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div>
+      <div class="section-heading">
+        <p class="eyebrow">chapter four · the world is yours</p>
+        <h2 id="dreamTitle">Your dreams. Your future.<br><em>Your kind of magic.</em></h2>
+        <p class="section-subtitle">A few things I hope you never forget.</p>
+      </div>
+      <div class="quote-stack" id="quoteStack">
+        <p class="quote-line">“Never doubt your potential. You are capable of achieving things you haven't even imagined yet.”</p>
+      </div>
+      <div class="wish-generator">
+        <p class="eyebrow">a tiny birthday blessing</p>
+        <p class="generated-wish" id="generatedWish" aria-live="polite">May this year surprise you with beautiful beginnings.</p>
+        <button class="wish-button" id="generateWish" type="button">Make another little wish ✨</button>
+      </div>
+      <div class="reminder-area">
+        <div class="reminder-heading"><span class="tiny-star">✧</span><div><p class="eyebrow">a little reminder for you</p><h3>Keep these close, always.</h3></div></div>
+        <div class="reminder-grid">
+          <button class="reminder-card dream-card" type="button" data-message="Your dreams deserve your courage. Keep showing up for them, even when the road feels long. Every small step is still a step closer."><span class="card-symbol">✧</span><strong>Your Dreams</strong><small>Never stop chasing them.</small><span class="card-open">Tap to unfold ↗</span><span class="card-message"></span></button>
+          <button class="reminder-card strength-card" type="button" data-message="You have made it through days you once thought would be too hard. That quiet strength is yours. Never underestimate what you can do."><span class="card-symbol">☼</span><strong>Your Strength</strong><small>Never underestimate yourself.</small><span class="card-open">Tap to unfold ↗</span><span class="card-message"></span></button>
+          <button class="reminder-card happy-card" type="button" data-message="Your happiness matters—not only after every goal is reached, but right now, in the little moments. You deserve softness, peace, and joy along the way."><span class="card-symbol">♡</span><strong>Your Happiness</strong><small>Never forget to choose yourself.</small><span class="card-open">Tap to unfold ↗</span><span class="card-message"></span></button>
+        </div>
+      </div>
+      <p class="dream-ending">No matter where life takes you, I will always wish for your happiness, success, peace, and beautiful future.</p>
+      <button class="primary-button" data-next="5" type="button">One last chapter… <span>♥</span></button>
+    </section>
+
+    <!-- PAGE 5: finale -->
+    <section class="page page-five" id="page-5" aria-labelledby="finalTitle">
+      <div class="final-sky" aria-hidden="true" id="finalSky"></div>
+      <div class="rose-petals" aria-hidden="true" id="rosePetals"></div>
+      <div class="final-content">
+        <p class="eyebrow">the final chapter · from me to you</p>
+        <div class="final-heart-outline">♡</div>
+        <h2 id="finalTitle" class="final-title">Happy Birthday,<br><em>Mazher</em> <span>♥</span></h2>
+        <p class="final-subtitle">My Love, My Favourite Person,<br>My Beautiful Reason to Smile.</p>
+        <div class="final-message">
+          <p>I don't know what the future holds, but I genuinely hope it holds countless reasons for you to smile.</p>
+          <p>May you get everything your heart has been working for. May your hard work turn into success, your worries into peace, and your dreams into beautiful realities.</p>
+          <p>Keep smiling, keep growing, and never forget how special you are.</p>
+          <p>Today is your day, but honestly, I feel lucky that the world got someone like you.</p>
+          <p class="final-signoff">Happy Birthday, My Love. <span>❤️</span></p>
+        </div>
+        <button class="primary-button final-surprise-button" id="lastSurprise" type="button">One Last Surprise... <span>💌</span></button>
+        <button class="replay-button" id="replayButton" type="button">↻ Replay our little movie</button>
+      </div>
+      <div class="last-surprise" id="lastSurprisePanel" aria-live="polite">
+        <div class="giant-heart">♥</div>
+        <p class="last-wish">If I could make one wish today, it would be to see you happy, successful, healthy, and smiling every single day.</p>
+        <h2>I LOVE YOU, MY LOVE! <span>❤️</span></h2>
+        <button class="replay-button light-replay" id="replayButtonFinal" type="button">↻ Watch it all again</button>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav" aria-label="Birthday chapters">
+    <button class="nav-dot current" data-page="1" aria-label="Go to page 1"></button>
+    <button class="nav-dot" data-page="2" aria-label="Go to page 2"></button>
+    <button class="nav-dot" data-page="3" aria-label="Go to page 3"></button>
+    <button class="nav-dot" data-page="4" aria-label="Go to page 4"></button>
+    <button class="nav-dot" data-page="5" aria-label="Go to page 5"></button>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
